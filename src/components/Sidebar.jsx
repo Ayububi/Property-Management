@@ -45,7 +45,7 @@ function Sidebar() {
                         {/* <li className="menu-title">Custom</li> */}
 
                         <li className={`menu-item ${isActive('/complaint') ? 'active' : ''}`}>
-                            <NavLink to='/complaint' className="menu-link waves-effect">
+                            <NavLink to='/Complaint' className="menu-link waves-effect">
                                 <span className="menu-icon"><i className="bx bx-file"></i></span>
                                 <span className="menu-text"> Complaint </span>
                             </NavLink>

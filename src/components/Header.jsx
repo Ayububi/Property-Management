@@ -1,6 +1,28 @@
 import React from 'react'
 
 function Header(props) {
+      const toggleSidebar = () => {
+          document.documentElement.classList.toggle('sidebar-enable');
+      };
+  
+  
+  
+      const toggleScreen = () => {
+          if (!document.fullscreenElement) {
+              document.documentElement.requestFullscreen().catch((err) => {
+                  console.error(`Error attempting to enable fullscreen mode: ${err.message}`);
+              });
+          } else {
+              document.exitFullscreen();
+          }
+      };
+  
+  
+      const toggleTheme = () => {
+          const currentTheme = document.documentElement.getAttribute('data-bs-theme');
+          const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-bs-theme', newTheme);
+      };
   return (
     <>
          {/*-- ========== Topbar Start ========== -*/}
@@ -24,7 +46,7 @@ function Header(props) {
                 </div>
 
                 {/*-- Sidebar Menu Toggle Button -*/}
-                <button className="button-toggle-menu" onClick={props.toggleSidebar}>
+                <button className="button-toggle-menu" onClick={toggleSidebar}>
                   <i className="mdi mdi-menu"></i>
                 </button>
               </div>
@@ -32,7 +54,7 @@ function Header(props) {
               <ul className="topbar-menu d-flex align-items-center gap-4">
 
                 <li className="d-none d-md-inline-block">
-                  <a className="nav-link" onClick={props.toggleScreen} style={{ cursor: 'pointer' }}>
+                  <a className="nav-link" onClick={toggleScreen} style={{ cursor: 'pointer' }}>
                     <i className="mdi mdi-fullscreen font-size-24"></i>
                   </a>
 
@@ -209,7 +231,7 @@ function Header(props) {
                   </div>
                 </li>
 
-                <li className="nav-link" id="theme-mode" onClick={props.toggleTheme}>
+                <li className="nav-link" id="theme-mode" onClick={toggleTheme}>
                   <i className="bx bx-moon font-size-24"></i>
                 </li>
 

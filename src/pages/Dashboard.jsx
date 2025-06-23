@@ -2,30 +2,11 @@ import React, { useState , useEffect } from 'react';
 import Sidebar_menu from "../components/Sidebar";
 
 
+
 function Dashboard() {
 
-  // const toggleSidebar = () => {
-  //   document.documentElement.classList.toggle('sidebar-enable');
-  // };
 
 
-
-  // const toggleScreen = () => {
-  //   if (!document.fullscreenElement) {
-  //     document.documentElement.requestFullscreen().catch((err) => {
-  //       console.error(`Error attempting to enable fullscreen mode: ${err.message}`);
-  //     });
-  //   } else {
-  //     document.exitFullscreen();
-  //   }
-  // };
-
-
-  // const toggleTheme = () => {
-  //   const currentTheme = document.documentElement.getAttribute('data-bs-theme');
-  //   const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-  //   document.documentElement.setAttribute('data-bs-theme', newTheme);
-  // };
 
   useEffect(() => {
     // Bar Chart
@@ -65,12 +46,13 @@ function Dashboard() {
         element: "morris-donut-example",
         resize: true,
         backgroundColor: "transparent",
-        colors: ["#20b799", "#20b500",  "#346ee0", "#e9ecef"],
+        colors: ["#20b799", "#20b500",  "#346ee0", "#e9ecef" , "#f15050"],
         data: [
           { label: "Samsung Company", value: 52 },
           { label: "Redme Company", value: 12 },
           { label: "Apple Company", value: 30 },
-          { label: "Vivo Mobiles", value: 20 }
+          { label: "Vivo Mobiles", value: 20 },
+          { label: "Infinix", value: 40 }
         ]
       });
     }
@@ -104,30 +86,7 @@ function Dashboard() {
   return (
     <>
 
-      {/*-- ========== Topbar End ========== -*/}
 
-      <div className="px-3">
-
-        {/*-- Start Content-*/}
-        <div className="container-fluid">
-
-          {/*-- start page title -*/}
-          <div className="py-3 py-lg-4">
-            <div className="row">
-              <div className="col-lg-6">
-                <h4 className="page-title mb-0">Dashboard</h4>
-              </div>
-              <div className="col-lg-6">
-                <div className="d-none d-lg-block">
-                  <ol className="breadcrumb m-0 float-end">
-                    <li className="breadcrumb-item"><a href="javascript: void(0);">Lunoz</a></li>
-                    <li className="breadcrumb-item active">Dashboard</li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/*-- end page title -*/}
 
           <div className="row">
             <div className="col-xl-3 col-md-6">
@@ -536,9 +495,6 @@ function Dashboard() {
             </div> {/*-- end col -*/}
           </div> {/*-- end row -*/}
 
-        </div> {/*-- container -*/}
-
-      </div> {/*-- content -*/}
 
 
     </>
