@@ -4,13 +4,10 @@ import DateInput from "../../components/Date/Date";
 import  Button  from "../../components/Button/Button";
 const TenantForm = () => {
   return (
-    <div className="container-fluid py-5 bg-light min-vh-100">
-      <div className="row justify-content-center">
-        <div className="col-md-10 col-lg-8 col-xl-7">
-          <div className="card shadow-sm">
-            <div className="card-header  ">
-              <h4 className="mb-0 ">Tenant Form</h4>
-            </div>
+     <div className="min-vh-100 d-flex flex-column">
+      <div className="flex-grow-1">
+        <div className="card h-100 w-100 border-0">
+          <div className="card-header">
             <div className="card-body">
               <form>
                 <div className="row g-3">
